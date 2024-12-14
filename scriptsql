@@ -1,0 +1,24 @@
+SELECT *
+FROM public.donation_data
+
+--A)How much is the total donation?
+SELECT sum (donation) AS Total_Donation
+FROM public.donation_data
+
+--B) What is the total donation by gender?
+
+SELECT gender,sum (donation) AS Total_Donation
+FROM public.donation_data
+GROUP BY gender
+
+--C)Show the total donation and number of donations  by gender
+SELECT gender,sum (donation) AS Total_Donation,COUNT (gender) Number_Of_Gender
+FROM public.donation_data
+GROUP BY gender
+
+--D)Total donation made by frequency of donation
+SELECT sum (donation) AS Total_Donation,donation_frequency AS Frequency_Of_Donation
+FROM public.donation_data
+JOIN public.donor_data
+ON public.donor_data.id=public.donation_data.id
+GROUP BY donation_frequency
