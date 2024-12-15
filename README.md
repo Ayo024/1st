@@ -1,4 +1,4 @@
-SELECT *
+
 FROM public.donation_data
 
 --A)How much is the total donation?
@@ -54,3 +54,6 @@ SELECT state,donation
 FROM public.donation_data
 ORDER BY donation asc
 LIMIT 10
+![image](https://github.com/user-attachments/assets/85876a85-cf80-474d-9dd3-55f1915f1505)
+
+
