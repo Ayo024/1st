@@ -1,4 +1,4 @@
-
+This a personal project use postresql to query the data set, created relationship explore the data to derive meaningful insight. Then use Power BI to visualise and present my findings 
 FROM public.donation_data
 
 --A)How much is the total donation?
